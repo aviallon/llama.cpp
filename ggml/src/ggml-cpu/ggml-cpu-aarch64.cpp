@@ -4154,7 +4154,7 @@ static void ggml_backend_cpu_aarch64_buffer_set_tensor(ggml_backend_buffer_t buf
 }
 
 static const char * ggml_backend_cpu_aarch64_buffer_type_get_name(ggml_backend_buffer_type_t buft) {
-    return "CPU_AARCH64";
+    return "CPU_REPACKED";
 
     GGML_UNUSED(buft);
 }

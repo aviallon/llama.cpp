@@ -39,7 +39,7 @@ std::vector<ggml_backend_buffer_type_t>& ggml_backend_cpu_get_extra_buffers_type
         }
 #endif
 
-#ifdef GGML_USE_CPU_AARCH64
+#ifdef GGML_USE_CPU_REPACKED
         if (ggml_backend_cpu_aarch64_buffer_type()) {
             bufts.push_back(ggml_backend_cpu_aarch64_buffer_type());
         }
@@ -559,8 +559,8 @@ static ggml_backend_feature * ggml_backend_cpu_get_features(ggml_backend_reg_t r
     #ifdef GGML_USE_OPENMP
         features.push_back({ "OPENMP", "1" });
     #endif
-    #ifdef GGML_USE_CPU_AARCH64
-        features.push_back({ "AARCH64_REPACK", "1" });
+    #ifdef GGML_USE_CPU_REPACKED
+        features.push_back({ "ONLINE_REPACK", "1" });
     #endif
 
         features.push_back({ nullptr, nullptr });

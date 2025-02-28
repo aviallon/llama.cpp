@@ -312,8 +312,8 @@ function(ggml_add_cpu_backend_variant_impl tag_name)
         message(STATUS "Unknown architecture")
     endif()
 
-    if (GGML_CPU_AARCH64)
-        target_compile_definitions(${GGML_CPU_NAME} PRIVATE GGML_USE_CPU_AARCH64)
+    if (GGML_CPU_REPACKED)
+        target_compile_definitions(${GGML_CPU_NAME} PRIVATE GGML_USE_CPU_REPACKED)
     endif()
 
     message(STATUS "Adding CPU backend variant ${GGML_CPU_NAME}: ${ARCH_FLAGS} ${ARCH_DEFINITIONS}")

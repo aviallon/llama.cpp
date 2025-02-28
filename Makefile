@@ -366,8 +366,8 @@ ifdef LLAMA_SERVER_SSL
 	MK_LDFLAGS += -lssl -lcrypto
 endif
 
-ifndef GGML_NO_CPU_AARCH64
-	MK_CPPFLAGS += -DGGML_USE_CPU_AARCH64
+ifndef GGML_NO_CPU_REPACKED
+	MK_CPPFLAGS += -DGGML_USE_CPU_REPACKED
 endif
 
 # warnings
